@@ -4,7 +4,7 @@ html {
   width: 100%;
   min-height: 100%;
   height: 100%;
-  font: 11px/18px "Lato", "Helvetica Neue", sans-serif;
+  font: 11px/18px "Roboto Mono", "Helvetica Neue", sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
 }
@@ -18,7 +18,7 @@ html:before {
   display: block;
   min-height: 100%;
   height: 100%;
-  background: #1C98DE;
+  background: #2D3FD1;
 }
 .notice {
   background: yellow;
@@ -30,7 +30,7 @@ html:before {
   padding-bottom: 5%;
 }
 a {
-  color: #1C98DE;
+  color: #2D3FD1;
   font-weight: bold;
   text-decoration: none;
   transition:.3s;
