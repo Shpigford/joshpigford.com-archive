@@ -6,7 +6,7 @@ html {
   height: 100%;
   font: 11px/18px "Roboto Mono", "Helvetica Neue", sans-serif;
   color: #222;
-  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 html:before {
   position: fixed;
