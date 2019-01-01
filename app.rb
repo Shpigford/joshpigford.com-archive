@@ -19,3 +19,8 @@ get '/past' do
   @title = "Past projects"
   erb :past
 end
+
+get '/health' do
+  @title = "health"
+  erb :health
+end
