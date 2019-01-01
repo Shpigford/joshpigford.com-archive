@@ -34,3 +34,7 @@ get '/music' do
   @title = "Music"
   erb :music
 end
+
+get '/music/:post' do
+  erb :"music/#{params['post']}"
+end
