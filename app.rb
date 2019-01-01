@@ -21,6 +21,6 @@ get '/past' do
 end
 
 get '/health' do
-  @title = "health"
+  @title = "Health"
   erb :health
 end
