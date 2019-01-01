@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Josh Pigford</title>
+  <title><%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %></title>
   <meta name="description" content="Josh Pigford">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="">
@@ -16,10 +16,20 @@
   <meta name="twitter:title" content="">
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,300i,400,500,700,700i|Rubik:300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,300i,400,500,700,700i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <div class="content"><%= yield %></div>
+  <div class="content">
+    <header>
+      <a href="/"><img width="300" height="300" alt="Josh Pigford" src="/images/headshot.jpg" /></a>
+
+      <h1><a href="/">Josh Pigford</a></h1>
+      <p>Maker. Dabbler. I can't stop starting things. Bearded.</p>
+      <p><a href="https://twitter.com/Shpigford" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Shpigford</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+    </header>
+
+    <%= yield %>
+  </div>
 </body>
 </html>

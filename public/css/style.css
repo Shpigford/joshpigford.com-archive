@@ -20,11 +20,6 @@ html:before {
   height: 100%;
   background: #2D3FD1;
 }
-.notice {
-  background: yellow;
-  padding: 10px;
-  font-size: 14px;
-}
 .content {
   margin: 5% 8% 10% 8%;
   padding-bottom: 5%;
@@ -33,17 +28,29 @@ a {
   color: #2D3FD1;
   font-weight: bold;
   text-decoration: none;
-  transition:.3s;
 }
 a:hover {
-  color: #444;
+  color: white;
+  background: #2D3FD1;
+}
+h1, h2, h3, h4 {
+  margin: 0 0 15px 0;
+  padding: 0;
 }
 h1 {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 32px;
 }
 h2 {
   font-size: 25px;
+  margin-top: 35px;
+}
+h3 {
+  font-size: 20px;
+  margin-top: 35px;
+}
+h4 {
+  font-size: 18px;
   margin-top: 35px;
 }
 p, ul {
@@ -70,10 +77,33 @@ time, .coming_soon {
   margin-left: 4px;
   border-radius: 3px;
 }
-img {
-  width: 130px;
-  height: 130px;
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
+header {
+  line-height: 12px;
+}
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header h1 {
+  margin: 0;
+  padding-top: 5px;
+  line-height: 30px;
+}
+header h1 a {
+  color: #222;
+}
+header img {
+  width: 160px;
+  height: 160px;
   border-radius: 200px;
+  float: left;
+  margin-right: 30px;
+}
+.projects {}
+.projects h4 {
+  margin-bottom: 0;
+}
+.projects p {
+  margin-top: 8px;
 }
