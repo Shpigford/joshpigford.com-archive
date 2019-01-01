@@ -29,3 +29,8 @@ get '/podcasts' do
   @title = "Podcasts"
   erb :podcasts
 end
+
+get '/music' do
+  @title = "Music"
+  erb :music
+end
