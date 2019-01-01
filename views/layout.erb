@@ -17,7 +17,8 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css?v=<%= Time.now.to_i %>">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23290403-7"></script>
   <script>
@@ -33,9 +34,11 @@
     <header>
       <a href="/"><img width="300" height="300" alt="Josh Pigford" src="/images/headshot.jpg" /></a>
 
-      <h1><a href="/">Josh Pigford</a></h1>
+      <h1><a href="/">Josh Pigford</a> <span class="social"><a href="https://twitter.com/Shpigford"><i class="fab fa-twitter"></i></a></span></h1>
       <p>Maker. Dabbler. I can't stop starting things. Bearded.</p>
-      <p><a href="https://twitter.com/Shpigford" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Shpigford</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+      <p>&rarr;
+        <a href="/health">Health</a>, <a href="/interviews">Interviews</a>, <a href="/music">Music</a>, <a href="/now">Now</a>, <a href="/past">Past</a>, <a href="/podcasts">Podcasts</a>
+      </p>
     </header>
 
     <%= yield %>

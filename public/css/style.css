@@ -99,6 +99,16 @@ header h1 {
 header h1 a {
   color: #222;
 }
+header h1 .social {
+  font-size: 20px;
+  line-height: 12px;
+  top: -4px;
+  position: relative;
+}
+header h1 .social a:hover {
+  background: transparent;
+  color: #2D3FD1;
+}
 header img {
   width: 140px;
   height: 140px;
