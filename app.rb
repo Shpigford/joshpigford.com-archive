@@ -24,3 +24,8 @@ get '/health' do
   @title = "Health"
   erb :health
 end
+
+get '/podcasts' do
+  @title = "Podcasts"
+  erb :podcasts
+end
