@@ -24,6 +24,11 @@ html:before {
   margin: 5% 8% 10% 8%;
   padding-bottom: 5%;
 }
+hr {
+  margin-top: 30px;
+  border-top: 1px dashed #222;
+  border-bottom: 1px dashed #fff;
+}
 a {
   color: #2D3FD1;
   font-weight: bold;
@@ -55,7 +60,8 @@ h4 {
 }
 p, ul {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 25px;
+  margin-bottom: 15px;
 }
 ul {
   list-style: square;
@@ -94,8 +100,8 @@ header h1 a {
   color: #222;
 }
 header img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 200px;
   float: left;
   margin-right: 30px;
