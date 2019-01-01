@@ -131,3 +131,9 @@ header img {
   width: 100%;
   height: 800px;
 }
+
+footer {
+  margin-top: 75px;
+  font-size: 13px;
+  color: #aaa;
+}
