@@ -6,6 +6,6 @@ get '/' do
 end
 
 get '/now' do
-  @title = "What I'm doing now"
+  @title = "What I'm working on now"
   erb :now
 end
