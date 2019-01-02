@@ -142,6 +142,10 @@ header img {
   height: 800px;
 }
 
+article {
+  max-width: 800px;
+}
+
 footer {
   margin-top: 75px;
   font-size: 13px;

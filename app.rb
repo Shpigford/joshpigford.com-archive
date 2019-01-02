@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/content_for'
 require "sinatra/reloader" if development?
 
 get '/' do
@@ -37,4 +38,15 @@ end
 
 get '/music/:post' do
   erb :"music/#{params['post']}"
+end
+
+get '/articles' do
+  @title = "Articles"
+  erb :articles
+end
+
+get '/articles/:post' do
+  #erb :layout, layout: false do
+    erb :"articles/#{params['post']}"#, layout: :"articles/layout"
+  #end
 end
