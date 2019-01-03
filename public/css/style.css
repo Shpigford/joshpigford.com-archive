@@ -145,6 +145,20 @@ header img {
 article {
   max-width: 800px;
 }
+article img {
+  max-width: 100%;
+}
+
+.convo {
+  background: yellow;
+  text-align: center;
+  padding: 1px 0 5px 0;
+}
+.convo iframe {
+  top: 4px;
+  position: relative !important;
+  vertical-align: text-bottom !important;
+}
 
 footer {
   margin-top: 75px;

@@ -1,0 +1,10 @@
+<%= erb :'partials/header' %>
+<h2><%= @title %> <time><%= @published %></time></h2>
+<article>
+  <%= yield %>
+  <div class="convo">
+  <p>Got something to add? Continue the conversation on Twitter: <a href="https://twitter.com/intent/tweet?screen_name=Shpigford&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="true" data-size="large" data-url="https://joshpigford.com/articles/<%= params[:post] %>" data-related="Shpigford"
+>Tweet to @Shpigford</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>
+</article>
+<%= erb :'partials/footer' %>  

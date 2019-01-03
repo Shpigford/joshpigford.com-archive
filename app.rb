@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'sinatra/content_for'
-require "sinatra/reloader" if development?
+require 'sinatra/reloader' if development?
 
 get '/' do
   erb :index
@@ -46,7 +46,5 @@ get '/articles' do
 end
 
 get '/articles/:post' do
-  #erb :layout, layout: false do
-    erb :"articles/#{params['post']}"#, layout: :"articles/layout"
-  #end
+  erb :"articles/#{params['post']}", layout: :"articles/layout"
 end

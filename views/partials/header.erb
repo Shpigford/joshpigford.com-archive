@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title><%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %></title>
+  <meta name="description" content="Josh Pigford">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="<%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://joshpigford.com">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@shpigford">
+  <meta name="twitter:creator" content="@shpigford">
+  <meta name="twitter:title" content="<%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %>">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css?v=<%= Time.now.to_i %>">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23290403-7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23290403-7');
+  </script>
+</head>
+<body>
+
+  <div class="content">
+    <header>
+      <a href="/"><img width="300" height="300" alt="Josh Pigford" src="/images/headshot.jpg" /></a>
+
+      <h1><a href="/">Josh Pigford</a> <span class="social"><a href="https://twitter.com/Shpigford"><i class="fab fa-twitter"></i></a></span></h1>
+      <p>Maker. Dabbler. I can't stop starting things. Bearded.</p>
+      <p>&rarr;
+        <a href="/articles">Articles</a>, <a href="/health">Health</a>, <a href="/interviews">Interviews</a>, <a href="/music">Music</a>, <a href="/now">Now</a>, <a href="/past">Past</a>, <a href="/podcasts">Podcasts</a>
+      </p>
+    </header>
+
+    <script async data-uid="e5607bbc25" src="https://f.convertkit.com/e5607bbc25/7c2a7d133e.js"></script>
