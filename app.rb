@@ -58,7 +58,7 @@ Dir.glob('posts/*.md').each do |file|
     @title = metadata['title']
     @content = RDiscount.new( File.open(file).read.gsub(/---(.|\n)*---/, '')).to_html
     @published = Date.parse(date).strftime('%B %e, %Y')
-    @description = @content.gsub(%r{</?[^>]+?>}, '')[0...100]
+    @description = @content.gsub(%r{</?[^>]+?>}, '')[0...300]
     erb :"articles/layout", layout: false
   end
 end
