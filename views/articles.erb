@@ -1,6 +1,12 @@
 <h2>Articles</h2>
 <p><em>(I'm currently working on migrating various articles I've written from other places, so for now this is incomplete.)</em></p>
+
 <ul>
-  <li><a href="/articles/empathizing">On empathizing & understanding</a> <time>May 14, 2018</time></li>
-  <li><a href="/articles/year-one-handmade-shop">Year one with a handmade shop</a> <time>January 3, 2018</time></li>
+<% Dir.glob('posts/*.md').sort.reverse.each do |file| %>
+  <% 
+    metadata = YAML.load_file(file)
+    parts = file.gsub('posts/','').split('.')
+  %>
+   <li><a href="/articles/<%= parts[1] %>"><%= metadata['title'] %></a> <time><%= Date.parse(parts[0]).strftime('%B %e, %Y') %></time></li>
+<% end %>
 </ul>

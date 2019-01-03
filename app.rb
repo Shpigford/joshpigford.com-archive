@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'sinatra/content_for'
 require 'sinatra/reloader' if development?
+require 'rdiscount'
+require 'yaml'
 
 get '/' do
   erb :index
@@ -45,6 +47,17 @@ get '/articles' do
   erb :articles
 end
 
-get '/articles/:post' do
-  erb :"articles/#{params['post']}", layout: :"articles/layout"
+Dir.glob('posts/*.md').each do |file|
+  parts = file.gsub('posts/','').split('.')
+  date = parts[0]
+  slug = parts[1]
+
+  metadata = YAML.load_file(file)
+
+  get "/articles/#{slug}" do
+    @title = metadata['title']
+    @content = RDiscount.new( File.open(file).read.gsub(/---(.|\n)*---/, '')).to_html
+    @published = Date.parse(date).strftime('%B %e, %Y')
+    erb :"articles/layout", layout: false
+  end
 end

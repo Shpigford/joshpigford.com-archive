@@ -9,6 +9,7 @@ GEM
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
+    rdiscount (2.2.0.1)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -32,6 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   rack
+  rdiscount
   sinatra
   sinatra-contrib
   thin
