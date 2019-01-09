@@ -149,6 +149,11 @@ article img {
   max-width: 100%;
 }
 
+.graph {
+  max-width: 100%;
+  box-shadow: 8px 8px #2D3FD1;
+}
+
 .convo {
   background: yellow;
   text-align: center;
