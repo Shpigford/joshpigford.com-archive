@@ -13,7 +13,7 @@ Gross Revenue: **\$9152**
 Number of Sales: **242**
 Average Order Value: **\$38**
 
-![Cedar & Sail 2017 Sales Numbers](/images/2017-numbers.png)
+![Cedar & Sail 2017 Sales Numbers](images/2017-numbers.png)
 
 ### Sales Channels
 
@@ -27,7 +27,7 @@ I sold my products across five different sales channels:
 
 Here’s a percent of sales breakdown by channel.
 
-![Cedar & Sail 2017 Sales Channels](/images/2017-sales-channels.png)
+![Cedar & Sail 2017 Sales Channels](images/2017-sales-channels.png)
 
 ### Local Markets
 
