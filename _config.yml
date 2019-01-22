@@ -1,0 +1,7 @@
+exclude: ["CNAME", "README.md", "Gemfile", "Gemfile.lock", "_config.yml"]
+include: ["_pages"]
+permalink: /articles/:title
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji

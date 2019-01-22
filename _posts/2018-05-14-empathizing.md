@@ -1,6 +1,8 @@
 ---
-  title: On empathizing & understanding
+layout: post
+title: On empathizing & understanding
 ---
+
 This past Friday Twitter became an…interesting place. I got a taste of a side of Twitter that, in 10 years, I’d largely managed to steer clear of.
 
 The day prior I’d made a [seemingly innocuous tweet](https://twitter.com/Shpigford/status/994583740943929346), no more/less offensive than really anything else I’ve posted as an observation/thought/learning over the years of building a business. (At least not from the perspective of what was bouncing around in my head.)
@@ -61,18 +63,18 @@ The intent of my tweet was not to say I wholesale disqualify candidates because 
 
 So, what have I learned from this?
 
-*   **There are a lot of people for whom employment is a massive struggle**, not through any fault of their own, but due to a system that really does oppress and make it nearly impossible to improve their situation. Again, Marco Rogers [laid out a lot of extremely productive and actionable ways to help](https://twitter.com/polotek/status/994975896707592192) those underserved and underrepresented, especially in tech.
-*   **Clarity in communication is crucial** _(sorry, that feels really corporate…so many C’s)_. My tweet was an off-the-cuff reaction to a minor frustration combing through a huge number of applications (for which I’m grateful to have) and not well thought out by any stretch.
-*   **Seek to _understand_ and not _to be understood_.** I got defensive far too quickly and tried to fight on my hill when I should have more readily sought to understand where people were coming from.
+- **There are a lot of people for whom employment is a massive struggle**, not through any fault of their own, but due to a system that really does oppress and make it nearly impossible to improve their situation. Again, Marco Rogers [laid out a lot of extremely productive and actionable ways to help](https://twitter.com/polotek/status/994975896707592192) those underserved and underrepresented, especially in tech.
+- **Clarity in communication is crucial** _(sorry, that feels really corporate…so many C’s)_. My tweet was an off-the-cuff reaction to a minor frustration combing through a huge number of applications (for which I’m grateful to have) and not well thought out by any stretch.
+- **Seek to _understand_ and not _to be understood_.** I got defensive far too quickly and tried to fight on my hill when I should have more readily sought to understand where people were coming from.
 
 ### How I can improve
 
 I made a mistake. Here are some ways I’m looking to improve.
 
-*   **Default to the positive.** I went negative with my original tweet. Instead of laying out ways that we’re working to make our company a great place you want to stay at or fostering discussion on ways I and others can make that happen, I just vented and negative venting doesn’t really help anyone. As Faruk Ateş mentioned to me, _“…I think it would be much more beneficial to everyone to act through love, first”_.
-*   **Reframe the question.** One woman (Charlotte!) emailed a fantastic suggestion of instead of asking for an explanation around multiple short jobs, to instead ask _“I see several short jobs on here, so I assume you’re still looking for the right fit. What would you need to see in a workplace to be comfortable staying in one job for more than a couple of years?”_
-*   **Look for ways to actively help those underserved and underrepresented find positive employment.** I (and most founders) have an extensive network of other founders they can tap into to help others find jobs. In that vein, please contact me if you’re out of work or stuck in a job that’s taking advantage of you.
-*   **Give more thought to how a given statement could be perceived** and what the motiviations are behind the statement to begin with.
-*   **Surround myself with more people _not_ like me** so I can more readily see the perspectives of others.
+- **Default to the positive.** I went negative with my original tweet. Instead of laying out ways that we’re working to make our company a great place you want to stay at or fostering discussion on ways I and others can make that happen, I just vented and negative venting doesn’t really help anyone. As Faruk Ateş mentioned to me, _“…I think it would be much more beneficial to everyone to act through love, first”_.
+- **Reframe the question.** One woman (Charlotte!) emailed a fantastic suggestion of instead of asking for an explanation around multiple short jobs, to instead ask _“I see several short jobs on here, so I assume you’re still looking for the right fit. What would you need to see in a workplace to be comfortable staying in one job for more than a couple of years?”_
+- **Look for ways to actively help those underserved and underrepresented find positive employment.** I (and most founders) have an extensive network of other founders they can tap into to help others find jobs. In that vein, please contact me if you’re out of work or stuck in a job that’s taking advantage of you.
+- **Give more thought to how a given statement could be perceived** and what the motiviations are behind the statement to begin with.
+- **Surround myself with more people _not_ like me** so I can more readily see the perspectives of others.
 
 So…that’s what I’ve got. Would love your feedback and, sweet goodness, if you made it this far through the article, I owe you a high five.

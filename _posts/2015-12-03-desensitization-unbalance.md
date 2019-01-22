@@ -1,12 +1,13 @@
 ---
-  title: Desensitization & Unbalance
+layout: post
+title: Desensitization & Unbalance
 ---
 
-*I published a version of this article a couple of years ago when the Boston Marathon bombings happened. In light of yesterday’s mass shooting in San Bernardino, I’m republishing this (and jumping back on my sabbatical).*
+_I published a version of this article a couple of years ago when the Boston Marathon bombings happened. In light of yesterday’s mass shooting in San Bernardino, I’m republishing this (and jumping back on my sabbatical)._
 
 I am a bit of a news junkie in that I find myself checking news sites probably a dozen times a day. It’s part habit, part entertainment and part curiosity. But more and more I find myself annoyed and really kind of disgusted with traditional media.
 
-Back in 2013, The Guardian (surprisingly) published [*News is bad for you — and giving up reading it will make you happier](http://www.guardian.co.uk/media/2013/apr/12/news-is-bad-rolf-dobelli)* and it really snapped a lot of things in to perspective for me. Things that, upon reading the article, seemed obvious but just hadn’t clicked before.
+Back in 2013, The Guardian (surprisingly) published [\*News is bad for you — and giving up reading it will make you happier](http://www.guardian.co.uk/media/2013/apr/12/news-is-bad-rolf-dobelli)\* and it really snapped a lot of things in to perspective for me. Things that, upon reading the article, seemed obvious but just hadn’t clicked before.
 
 There are two things that really bother me about my little news addiction…enough so that I feel I need to take some time off from consuming it, possibly permanently.
 
@@ -24,7 +25,7 @@ And that scares me.
 
 There are so many things the news never covers. Not because they don’t have the resources to cover it, but because they don’t have any reason to. Certain types of stories simply get better ratings than others, and I can’t blame them. News outlets are businesses. They will always be biased towards whatever makes them the most money.
 
-But consuming biased sources makes you, wait for it…*biased*.
+But consuming biased sources makes you, wait for it…_biased_.
 
 It notoriously highlights the negative and buries the positive. The negative and the dramatic are far more entertaining because it makes it easy for us to think “I’m glad that’s not me.”
 
@@ -40,6 +41,6 @@ Lack of clean water? 800 million.
 
 But all of these stories get relegated to random “specials” on Dateline or 60 Minutes once a year.
 
-These are issues that, as the richest country on earth, we could literally end *now*, but the media chooses to use their platform to talk about things that are largely irrelevant and unactionable to us.
+These are issues that, as the richest country on earth, we could literally end _now_, but the media chooses to use their platform to talk about things that are largely irrelevant and unactionable to us.
 
 So, I need make my move to fix that. I need to spend time resensitizing myself. I need to spend time finding out ways I can actually do something about global issues affecting humanity. And right now, ending my consumption of traditional news is the first step towards that.

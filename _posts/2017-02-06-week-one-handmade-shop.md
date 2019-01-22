@@ -1,5 +1,6 @@
 ---
-  title: Week one with a handmade shop
+layout: post
+title: Week one with a handmade shop
 ---
 
 A week ago I opened the proverbial doors to [Cedar & Sail](https://cedarandsail.com), my little handmade homewares shop. I wanted to walk through what the first week has been like, mostly for posterity sake.
@@ -10,13 +11,13 @@ Let’s take a look at various numbers and observations from this past week. I d
 
 ### Money, customers and orders
 
-Gross sales: **$265**  
-Discounts: **$57.75**  
-Net sales: **$207.25**
+Gross sales: **\$265**
+Discounts: **\$57.75**
+Net sales: **\$207.25**
 
 We had 7 orders. All were from the US. 3 were from people I know directly, 1 was from an Instagram ad and 3 were from people who [follow me on Twitter](https://twitter.com/Shpigford).
 
-Current average order value: **$37**.
+Current average order value: **\$37**.
 
 ### Products
 

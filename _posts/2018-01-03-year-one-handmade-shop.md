@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Year one with a handmade shop
 ---
 
@@ -8,9 +9,9 @@ I went in to this with zero expectations. Really, I just wanted to cover my cost
 
 ### Revenue
 
-Gross Revenue: **$9152**  
-Number of Sales: **242**  
-Average Order Value: **$38**  
+Gross Revenue: **\$9152**
+Number of Sales: **242**
+Average Order Value: **\$38**
 
 ![Cedar & Sail 2017 Sales Numbers](/images/2017-numbers.png)
 
@@ -18,11 +19,11 @@ Average Order Value: **$38**
 
 I sold my products across five different sales channels:
 
-*   Online Store
-*   Amazon Handmade
-*   Wholesale
-*   Etsy
-*   Local Markets
+- Online Store
+- Amazon Handmade
+- Wholesale
+- Etsy
+- Local Markets
 
 Here’s a percent of sales breakdown by channel.
 
@@ -64,10 +65,10 @@ I put every penny back in to the business so essentially came away with no profi
 
 There are a number of things I’d like to do with the business this year:
 
-*   **Figure out my profit margins.** Right now I have no real idea how much it costs in supplies and time to produce a given item. I’m definitely not losing money on them, but I just don’t know how much I’m actually making.
-*   **Design larger items.** Almost every item I sell is under 5 inches on its longest side. That’s great for little desk and small table decor items, but would love to introduce some larger items that can really be a focal point in a room.
-*   **Try new mediums.** I’d like to create more items out of other materials like wood and metal, and also work those in to the cement items I’ve got.
-*   **Become a plant guy.** I’ve been geeking out big time on plants, namely succulents, cacti and air plants. Been learning how to actually grow them myself and would happily start making them a part of the product line up (i.e. “This succulent would pair really well with the cement planter you just added to your shopping cart!”).
-*   **Involve my kids more.** Towards the end, with all the local markets, they started helping out a bunch and we all loved it. I want them to feel like they’ve got some ownership in it as well.
+- **Figure out my profit margins.** Right now I have no real idea how much it costs in supplies and time to produce a given item. I’m definitely not losing money on them, but I just don’t know how much I’m actually making.
+- **Design larger items.** Almost every item I sell is under 5 inches on its longest side. That’s great for little desk and small table decor items, but would love to introduce some larger items that can really be a focal point in a room.
+- **Try new mediums.** I’d like to create more items out of other materials like wood and metal, and also work those in to the cement items I’ve got.
+- **Become a plant guy.** I’ve been geeking out big time on plants, namely succulents, cacti and air plants. Been learning how to actually grow them myself and would happily start making them a part of the product line up (i.e. “This succulent would pair really well with the cement planter you just added to your shopping cart!”).
+- **Involve my kids more.** Towards the end, with all the local markets, they started helping out a bunch and we all loved it. I want them to feel like they’ve got some ownership in it as well.
 
 I generally like to bite off more than I can chew and my plans above are very much that. I likely won’t get to all of them, but I can certainly try! 🙂
