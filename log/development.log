@@ -2029,3 +2029,53 @@ Processing by RailsAdmin::MainController#edit as HTML
 Completed 200 OK in 266ms (Views: 258.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-10 16:04:41 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 494ms (Views: 490.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-10 16:04:43 -0600
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (4.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY publish_at desc[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 107ms (Views: 79.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/articles/useless-stuff-on-producthunt" for 127.0.0.1 at 2019-02-10 16:04:44 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"useless-stuff-on-producthunt"}
+  [1m[36mArticle Load (2.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."slug" = $1 LIMIT $2[0m  [["slug", "useless-stuff-on-producthunt"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (391.4ms)
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fc6d49e1428>:0x00007fc6ce6568e0>
+Did you mean?  @article):
+    4: <article>
+    5:   <%= markdown(@article.body) %>
+    6:   <div class="convo">
+    7:   <p>Got something to add? Continue the conversation on Twitter: <a href="https://twitter.com/intent/tweet?screen_name=Shpigford&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="true" data-size="large" data-url="<%= article_url(article.slug) %>" data-related="Shpigford"
+    8: >Tweet to @Shpigford</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+    9: </div>
+   10: </article>
+  
+app/views/articles/show.html.erb:7:in `_app_views_articles_show_html_erb__2628643917060931139_70245924969100'
+Started GET "/articles/useless-stuff-on-producthunt" for 127.0.0.1 at 2019-02-10 16:04:51 -0600
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"useless-stuff-on-producthunt"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."slug" = $1 LIMIT $2[0m  [["slug", "useless-stuff-on-producthunt"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.4ms)
+
+
