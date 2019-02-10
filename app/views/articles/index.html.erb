@@ -1,0 +1,8 @@
+<h2>Articles</h2>
+
+<ul>
+<% @articles.each do |article| %>
+   <li>
+    <%= link_to article.title, article_path(article.slug) %> <time><%= article.publish_at.strftime('%B %e, %Y') %></time></li>
+<% end %>
+</ul>
