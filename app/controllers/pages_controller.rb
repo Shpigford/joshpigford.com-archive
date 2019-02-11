@@ -1,22 +1,26 @@
 class PagesController < ApplicationController
   def index
-    
+    @description = "The home of profesional webmaster Dr. Josh Pigford. Just kidding, I'm not a doctor. Or a webmaster. I just make things."
   end
 
   def health
     @title = 'Health'
+    @description = "In 2019 I'm laser focused on living a healthier and more sustainable lifestyle. I've always struggled with getting regular exercise as well as having a healthy weight."
   end
 
   def interviews
     @title = 'Interviews'
+    @description = "The interviews I've done over the years."
   end
 
   def music
     @title = 'Music'
+    @description = "I'm an obsessive music listener and have been my whole life. I won't say I'm a music snob, but let's be honest, 95% of popular music these days is categerically some of the worst music ever created, but I digress 👴."
   end
 
   def now
     @title = 'Now'
+    @description = "What I'm working on now"
   end
 
   def past
@@ -25,5 +29,6 @@ class PagesController < ApplicationController
 
   def podcasts
     @title = 'Podcasts'
+    @description = "Here are podcasts I recommend checking out. Some publish regularly, others are short, one-off series."
   end
 end
