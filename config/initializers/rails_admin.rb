@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
 
   config.authenticate_with do
     authenticate_or_request_with_http_basic('Back Office') do |username, password|
-      username == 'foo' && password == 'bar'
+      username == ENV['admin_user'] && password == ENV['admin_pass']
     end
   end
 
