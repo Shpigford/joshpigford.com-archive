@@ -5,7 +5,11 @@
 <h3>What happened?</h3>
 <p><%= @project.outcome %></p>
 
+<% if @project.notes.present? %>
 <h3>Interesting bits</h3>
 <p><%= @project.notes %></p>
+<% end %>
 
+<% if @project.link.present? %>
 <h3><%= link_to "Go Wayback &rarr;".html_safe, @project.link %></h3>
+<% end %>
