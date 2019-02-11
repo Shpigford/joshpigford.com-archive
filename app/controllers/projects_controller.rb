@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.order('year ASC, id ASC')
+    @title = "Past Projects"
   end
 
   def show
