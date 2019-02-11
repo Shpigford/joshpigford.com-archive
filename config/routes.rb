@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   get 'interviews', to: 'pages#interviews'
   get 'music', to: 'pages#music'
   get 'now', to: 'pages#now'
-  get 'past', to: 'pages#past'
   get 'podcasts', to: 'pages#podcasts'
+
+  get '/past', to: redirect('/projects')
 
   root 'pages#index'
 end
