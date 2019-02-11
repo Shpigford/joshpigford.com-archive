@@ -1,0 +1,11 @@
+<p class="breadcrumb"><%= link_to "&larr; Back to projects".html_safe, projects_path %></p>
+<h2><%= @project.name %> <time><%= @project.year %></time></h2>
+<p><%= @project.description %></p>
+
+<h3>What happened?</h3>
+<p><%= @project.outcome %></p>
+
+<h3>Interesting bits</h3>
+<p><%= @project.notes %></p>
+
+<h3><%= link_to "Go Wayback &rarr;".html_safe, @project.link %></h3>

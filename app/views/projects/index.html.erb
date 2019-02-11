@@ -1,0 +1,23 @@
+<h2>Past projects</h2>
+<p>I've worked on an absurd number of things in the past.</p>
+
+<table class="project_list">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Started</th>
+      <th>Description</th>
+      <th>What Happened</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+    <tr>
+      <td><%= link_to project.name, project_path(project.slug) %></td>
+      <td><%= link_to project.year, project_path(project.slug) %></td>
+      <td><%= link_to project.description, project_path(project.slug) %></td>
+      <td><%= link_to project.outcome, project_path(project.slug) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

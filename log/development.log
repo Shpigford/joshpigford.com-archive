@@ -2079,3 +2079,1193 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-10 19:03:48 -0600
+Started GET "/articles/useless-stuff-on-producthunt" for 127.0.0.1 at 2019-02-10 19:03:48 -0600
+Started GET "/articles" for 127.0.0.1 at 2019-02-10 19:03:48 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+Processing by ArticlesController#show as HTML
+Processing by PagesController#index as HTML
+  Parameters: {"id"=>"useless-stuff-on-producthunt"}
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 551ms (Views: 547.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY publish_at desc[0m
+  ↳ app/views/articles/index.html.erb:4
+  [1m[36mArticle Load (2.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."slug" = $1 LIMIT $2[0m  [["slug", "useless-stuff-on-producthunt"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:8
+  Rendered articles/index.html.erb within layouts/application (35.3ms)
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 740ms (Views: 113.1ms | ActiveRecord: 46.0ms)
+
+
+Completed 200 OK in 761ms (Views: 164.1ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/past" for 127.0.0.1 at 2019-02-10 19:03:57 -0600
+Processing by PagesController#past as HTML
+  Rendering pages/past.html.erb within layouts/application
+  Rendered pages/past.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 134ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateProjects (20190211010704)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (40.6ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "year" character varying, "description" text, "outcome" text, "notes" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211010704_create_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211010704"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/admin/" for 127.0.0.1 at 2019-02-10 19:09:34 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (18.9ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (12.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (7.2ms)
+Completed 200 OK in 1196ms (Views: 777.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/admin/project?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:09:38 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.5ms)
+Completed 200 OK in 117ms (Views: 86.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/admin/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:09:40 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (3.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (2.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (8.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (68.1ms)
+Completed 200 OK in 100ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/project/new" for 127.0.0.1 at 2019-02-10 19:10:12 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sy2SVOOVIbRFa+XhUnedvd68h2PypLox7sQk4c0rqSbHkKqMyGkliSI9eQODaTfxAdCNWO36RiGyiQL3fAsVlg==", "project"=>{"name"=>"ReallyDumbStuff", "year"=>"2003", "description"=>"Link directory of weird things I found around the internet", "outcome"=>"Sold it", "notes"=>"Taught myself PHP with this"}, "return_to"=>"http://localhost:3000/admin/project", "_add_another"=>"", "model_name"=>"project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Create (2.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "year", "description", "outcome", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "ReallyDumbStuff"], ["year", "2003"], ["description", "Link directory of weird things I found around the internet"], ["outcome", "Sold it"], ["notes", "Taught myself PHP with this"], ["created_at", "2019-02-11 01:10:12.473424"], ["updated_at", "2019-02-11 01:10:12.473424"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject" for 127.0.0.1 at 2019-02-10 19:10:12 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"return_to"=>"http://localhost:3000/admin/project", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (9.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (50.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (15.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.0ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 254ms (Views: 244.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/project/new" for 127.0.0.1 at 2019-02-10 19:10:46 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n3fniXaDUdj1qehvtlhj0MePQfuiV4sSNjR8xGSx3Xj/kDyUdJLZIc0OItsFOPx3jK9yRM2kh3b5zfx4LczOXA==", "project"=>{"name"=>"ReallyFunArcade", "year"=>"2003", "description"=>"Link directory of Flash games", "outcome"=>"Sold it 1 year later for $4,500", "notes"=>"First site I ever sold"}, "return_to"=>"http://localhost:3000/admin/project", "_add_another"=>"", "model_name"=>"project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "year", "description", "outcome", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "ReallyFunArcade"], ["year", "2003"], ["description", "Link directory of Flash games"], ["outcome", "Sold it 1 year later for $4,500"], ["notes", "First site I ever sold"], ["created_at", "2019-02-11 01:10:46.392210"], ["updated_at", "2019-02-11 01:10:46.392210"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject" for 127.0.0.1 at 2019-02-10 19:10:46 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"return_to"=>"http://localhost:3000/admin/project", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (68.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (14.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.2ms)
+Completed 200 OK in 258ms (Views: 252.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateProjects (20190211010704)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (9.3ms)[0m  [1m[35mDROP TABLE "projects"[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190211010704"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateProjects (20190211010704)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "year" character varying, "description" text, "outcome" text, "notes" text, "link" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211010704_create_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211010704"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:19:25 -0600
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (44.9ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (17.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.5ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (10.8ms)
+Completed 200 OK in 1083ms (Views: 725.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/admin/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:19:28 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (2.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (61.0ms)
+Completed 200 OK in 102ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/project/new" for 127.0.0.1 at 2019-02-10 19:20:04 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HQkE2Mdygfynr85bfq5RrHnzRonkc6W0JNDQWx588WUyRzLSOHOOpXII9u85BMKbovHITjPMoaM3mVX3VlPdQ==", "project"=>{"name"=>"ReallyDumbStuff", "year"=>"2003", "description"=>"Link directory of weird things I found around the internet", "outcome"=>"Solid it", "notes"=>"Taught myself PHP with this", "link"=>"https://web.archive.org/web/20030527003613/http://www.reallydumbstuff.com:80/"}, "return_to"=>"http://localhost:3000/admin/project", "_add_another"=>"", "model_name"=>"project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Create (2.2ms)[0m  [1m[32mINSERT INTO "projects" ("name", "year", "description", "outcome", "notes", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "ReallyDumbStuff"], ["year", "2003"], ["description", "Link directory of weird things I found around the internet"], ["outcome", "Solid it"], ["notes", "Taught myself PHP with this"], ["link", "https://web.archive.org/web/20030527003613/http://www.reallydumbstuff.com:80/"], ["created_at", "2019-02-11 01:20:04.901302"], ["updated_at", "2019-02-11 01:20:04.901302"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject
+Completed 302 Found in 11ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject" for 127.0.0.1 at 2019-02-10 19:20:04 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"return_to"=>"http://localhost:3000/admin/project", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.7ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (8.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (58.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.7ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (15.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (7.4ms)
+Completed 200 OK in 260ms (Views: 254.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/project/new" for 127.0.0.1 at 2019-02-10 19:20:38 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wuoSYZzgPCGos8Lt7Kkcx04tIqyFFZSqJD6nHzzFVHGiDcl8nvG02JAUCFlfyYNgBQ0RE+rmmM7rxyejdbhHVQ==", "project"=>{"name"=>"ReallyFunArcade", "year"=>"2003", "description"=>"Link directory of Flash games", "outcome"=>"Sold it 1 year later for $4,500", "notes"=>"First site I ever sold", "link"=>"https://web.archive.org/web/20030810010353/http://www.reallyfunarcade.com/"}, "return_to"=>"http://localhost:3000/admin/project", "_add_another"=>"", "model_name"=>"project"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Create (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "year", "description", "outcome", "notes", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "ReallyFunArcade"], ["year", "2003"], ["description", "Link directory of Flash games"], ["outcome", "Sold it 1 year later for $4,500"], ["notes", "First site I ever sold"], ["link", "https://web.archive.org/web/20030810010353/http://www.reallyfunarcade.com/"], ["created_at", "2019-02-11 01:20:38.584388"], ["updated_at", "2019-02-11 01:20:38.584388"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/project/new?return_to=http%3A%2F%2Flocalhost%3A3000%2Fadmin%2Fproject" for 127.0.0.1 at 2019-02-10 19:20:38 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"return_to"=>"http://localhost:3000/admin/project", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.9ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (51.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (35.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.7ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (8.6ms)
+Completed 200 OK in 283ms (Views: 276.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/project/new" for 127.0.0.1 at 2019-02-10 19:21:26 -0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vV8G5iwR9N+G6XGQ4QJ+tt+Cy/RYjzzaG9+fBJT48fnduN37LgB8Jr5OuyRSYuERlKL4Szd8ML7UJh+43YXi3Q==", "project"=>{"name"=>"Indie Riot", "year"=>"2003", "description"=>"Online community & publication for musicians/artists", "outcome"=>"Shut it down", "notes"=>"I started it by writing music reviews, then it just pickled out. I got bored.\t", "link"=>"https://web.archive.org/web/20031205175733/http://www.indieriot.com:80/"}, "return_to"=>"http://localhost:3000/admin/project", "_save"=>"", "model_name"=>"project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Create (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "year", "description", "outcome", "notes", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Indie Riot"], ["year", "2003"], ["description", "Online community & publication for musicians/artists"], ["outcome", "Shut it down"], ["notes", "I started it by writing music reviews, then it just pickled out. I got bored.\t"], ["link", "https://web.archive.org/web/20031205175733/http://www.indieriot.com:80/"], ["created_at", "2019-02-11 01:21:26.998053"], ["updated_at", "2019-02-11 01:21:26.998053"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:21:27 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (58.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (20.7ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.4ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (5.9ms)
+Completed 200 OK in 264ms (Views: 258.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:23:24 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 5822ms (Views: 5815.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:32:10 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:32:58 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 72ms (Views: 56.3ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/past" for 127.0.0.1 at 2019-02-10 19:33:16 -0600
+Started GET "/past" for 127.0.0.1 at 2019-02-10 19:33:16 -0600
+Processing by PagesController#past as HTML
+  Rendering pages/past.html.erb within layouts/application
+  Rendered pages/past.html.erb within layouts/application (0.5ms)
+Processing by PagesController#past as HTML
+  Rendering pages/past.html.erb within layouts/application
+  Rendered pages/past.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 121ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:38:52 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 55ms (Views: 45.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:40:32 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:16
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:41:10 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 135ms (Views: 131.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:43:52 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:06 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:11 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 118ms (Views: 109.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:15 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 137ms (Views: 131.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:32 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 149ms (Views: 144.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:33 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:44:36 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:00 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:18 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:23 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 112ms (Views: 107.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:28 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 106ms (Views: 101.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:36 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 115ms (Views: 112.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:45 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:49 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 105ms (Views: 102.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:51 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:45:56 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 99ms (Views: 95.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:46:40 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 159ms (Views: 152.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:46:58 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 102ms (Views: 98.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:47:10 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:49:54 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (108.6ms)
+Completed 200 OK in 160ms (Views: 141.9ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:50:09 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 106ms (Views: 102.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:50:29 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:50:37 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 144ms (Views: 139.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:50:47 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:51:01 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 167ms (Views: 162.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:51:08 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 127ms (Views: 123.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:51:22 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 119ms (Views: 116.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:51:29 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 149ms (Views: 144.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:51:41 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:51:58 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+Completed 404 Not Found in 15ms (ActiveRecord: 6.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=reallydumbstuff):
+  
+app/controllers/projects_controller.rb:7:in `show'
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:52:49 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 73ms (Views: 60.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/projects/1-reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:52:52 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1-reallydumbstuff"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 73ms (Views: 61.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to AddSlugToProjects (20190211015315)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "projects" ADD "slug" character varying[0m
+  ↳ db/migrate/20190211015315_add_slug_to_projects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211015315"]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4927287131595584910)[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/projects/1-reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:54:05 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1-reallydumbstuff"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "1-reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.5ms)
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:54:09 -0600
+Completed 200 OK in 5402ms (Views: 5386.3ms | ActiveRecord: 3.0ms)
+
+
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (34.3ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 8.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"projects", :id=>nil}, missing required keys: [:id]):
+    13:   <tbody>
+    14:     <% @projects.each do |project| %>
+    15:     <tr>
+    16:       <td><%= link_to project.name, project_path(project.slug) %></td>
+    17:       <td><%= link_to project.year, project_path(project.slug) %></td>
+    18:       <td><%= link_to project.description, project_path(project.slug) %></td>
+    19:       <td><%= link_to project.outcome, project_path(project.slug) %></td>
+  
+app/views/projects/index.html.erb:16:in `block in _app_views_projects_index_html_erb__2164093197838225574_70165957186980'
+app/views/projects/index.html.erb:14:in `_app_views_projects_index_html_erb__2164093197838225574_70165957186980'
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:54:39 -0600
+Processing by RailsAdmin::MainController#index as HTML
+Started GET "/admin/project/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:54:39 -0600
+  Parameters: {"model_name"=>"project"}
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (9.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (94.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (3.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (89.2ms)
+Completed 200 OK in 741ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (13.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (2.6ms)
+Completed 200 OK in 1183ms (Views: 667.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/admin/project/3/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:54:42 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"3"}
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (2.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (62.9ms)
+Completed 200 OK in 126ms (Views: 85.3ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/admin/project/3/edit" for 127.0.0.1 at 2019-02-10 19:54:49 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T9mmUnmQosQuBWCQAKbb1AxG21XrQyLAJ6wnfrR4qAv5xRk7ZTj35a7EiXKdU01pDG7UQQrPQGJfMFaNtY0wkw==", "project"=>{"name"=>"Indie Riot", "year"=>"2003", "description"=>"Online community & publication for musicians/artists", "outcome"=>"Shut it down", "notes"=>"I started it by writing music reviews, then it just pickled out. I got bored.\t", "link"=>"https://web.archive.org/web/20031205175733/http://www.indieriot.com:80/", "slug"=>"indie-riot"}, "return_to"=>"http://localhost:3000/admin/project", "_save"=>"", "model_name"=>"project", "id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Update (1.1ms)[0m  [1m[33mUPDATE "projects" SET "slug" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["slug", "indie-riot"], ["updated_at", "2019-02-11 01:54:49.585010"], ["id", 3]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:54:49 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (83.1ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (15.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.0ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.4ms)
+Completed 200 OK in 346ms (Views: 340.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/project/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:54:51 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"2"}
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.7ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (1.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (6.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (58.1ms)
+Completed 200 OK in 120ms (Views: 83.5ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/admin/project/2/edit" for 127.0.0.1 at 2019-02-10 19:54:56 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6fEI/fEOOn9k6/vk1PpQN5QMU8QfCrBKxjuLoD4J3pU2ogABPADRUnZRkVYybSfzor7eDI3japDwL2KJA+YOzQ==", "project"=>{"name"=>"ReallyFunArcade", "year"=>"2003", "description"=>"Link directory of Flash games", "outcome"=>"Sold it 1 year later for $4,500", "notes"=>"First site I ever sold", "link"=>"https://web.archive.org/web/20030810010353/http://www.reallyfunarcade.com/", "slug"=>"reallyfunarcade"}, "return_to"=>"http://localhost:3000/admin/project", "_save"=>"", "model_name"=>"project", "id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "slug" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["slug", "reallyfunarcade"], ["updated_at", "2019-02-11 01:54:56.054629"], ["id", 2]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:54:56 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (70.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (13.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.2ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (6.9ms)
+Completed 200 OK in 246ms (Views: 240.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/project/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-02-10 19:54:58 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"project", "id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (1.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (2.0ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.4ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_text.html.haml (0.5ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/_submit_buttons.html.haml (7.6ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (59.2ms)
+Completed 200 OK in 101ms (Views: 81.6ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/admin/project/1/edit" for 127.0.0.1 at 2019-02-10 19:55:02 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JJOEKZCCWt2yQKvXF6e4qWPlwR+XIh7v/fO4KRWHzWJrK/pwLOYwK3YNjQ0Bw6xpouT2fThcYuKozRdwECS7Ig==", "project"=>{"name"=>"ReallyDumbStuff", "year"=>"2003", "description"=>"Link directory of weird things I found around the internet", "outcome"=>"Solid it", "notes"=>"Taught myself PHP with this", "link"=>"https://web.archive.org/web/20030527003613/http://www.reallydumbstuff.com:80/", "slug"=>"reallydumbstuff"}, "return_to"=>"http://localhost:3000/admin/project", "_save"=>"", "model_name"=>"project", "id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 ORDER BY "projects"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "slug" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["slug", "reallydumbstuff"], ["updated_at", "2019-02-11 01:55:02.199593"], ["id", 1]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/project
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/project" for 127.0.0.1 at 2019-02-10 19:55:02 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"project"}
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY projects.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (59.3ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.2ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (20.8ms)
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.5ms)
+  Rendering /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/Shpigford/.rvm/gems/ruby-2.5.1/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (12.7ms)
+Completed 200 OK in 297ms (Views: 290.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:55:03 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:55:08 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 69.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:55:29 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:55:37 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:56:16 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:56:24 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 74.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:56:25 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 75ms (Views: 60.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:56:28 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (3.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 36.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:56:40 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:57:17 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:57:30 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:57:38 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/reallyfunarcade" for 127.0.0.1 at 2019-02-10 19:57:39 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallyfunarcade"}
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallyfunarcade"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 84ms (Views: 72.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:57:41 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 87ms (Views: 82.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 19:57:42 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 43.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:57:43 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 69ms (Views: 58.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:57:45 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:58:01 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 80ms (Views: 49.5ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:58:29 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 92ms (Views: 56.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:59:15 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/reallydumbstuff" for 127.0.0.1 at 2019-02-10 19:59:23 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"reallydumbstuff"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "reallydumbstuff"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 83ms (Views: 76.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 19:59:51 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (6.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 70ms (Views: 57.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 20:00:14 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 224ms (Views: 218.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 20:00:20 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 123ms (Views: 119.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/indie-riot" for 127.0.0.1 at 2019-02-10 20:00:33 -0600
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"indie-riot"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = $1 LIMIT $2[0m  [["slug", "indie-riot"], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:7
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 68ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2019-02-10 20:00:53 -0600
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY year ASC, id ASC[0m
+  ↳ app/views/projects/index.html.erb:14
+  Rendered projects/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 87ms (Views: 66.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/past" for 127.0.0.1 at 2019-02-10 20:01:04 -0600
+Processing by PagesController#past as HTML
+  Rendering pages/past.html.erb within layouts/application
+  Rendered pages/past.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+

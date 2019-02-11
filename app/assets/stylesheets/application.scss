@@ -186,3 +186,35 @@ footer {
   font-size: 13px;
   color: #aaa;
 }
+.project_list {
+  width: 100%;
+  th {
+    text-align: left;
+  }
+  td, th {
+    padding: 4px 8px;
+  }
+  thead {
+    th {
+      border-bottom: 1px solid black;
+    }
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    td a {
+      display: block;
+      color: black;
+      font-weight: normal;
+    }
+    tr:hover {
+      cursor: pointer;
+      background-color: #2D3FD1;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+  }
+}
