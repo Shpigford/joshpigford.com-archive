@@ -36,4 +36,9 @@ class PagesController < ApplicationController
     @title = 'Podcasts'
     @description = "Here are podcasts I recommend checking out. Some publish regularly, others are short, one-off series."
   end
+
+  def reading
+    @title = 'Reading'
+    @description = "What I'm reading and what I've recently read."
+  end
 end
