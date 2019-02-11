@@ -1,4 +1,4 @@
-<% @description = markdown(@article.body).gsub(%r{</?[^>]+?>}, '')[0...300] %>
+<% @description = "#{markdown(@article.body).gsub(%r{</?[^>]+?>}, '')[0...300]}..." %>
 
 <h2><%= @article.title %> <time><%= @article.publish_at.strftime('%B %e, %Y') %></time></h2>
 <article>

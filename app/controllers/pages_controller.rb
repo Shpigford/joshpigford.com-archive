@@ -18,6 +18,11 @@ class PagesController < ApplicationController
     @description = "I'm an obsessive music listener and have been my whole life. I won't say I'm a music snob, but let's be honest, 95% of popular music these days is categerically some of the worst music ever created, but I digress 👴."
   end
 
+  def music_2018
+    @title = "Top Albums of 2018" 
+    @description = "These were the albums I had on rotation the most. In hindsight looks like I had pretty polarizing listening habits, going back and forth between pop and hardcore."
+  end
+
   def now
     @title = 'Now'
     @description = "What I'm working on now"

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'now', to: 'pages#now'
   get 'podcasts', to: 'pages#podcasts'
 
+  get '/music/2018', to: 'pages#music_2018'
+
   get '/past', to: redirect('/projects')
 
   root 'pages#index'
