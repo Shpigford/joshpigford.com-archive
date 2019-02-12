@@ -21,10 +21,9 @@ module ApplicationHelper
   end
 
   def last_updated
-    response = HTTParty.get('https://api.github.com/repos/Shpigford/joshpigford.com')
-    json = JSON.parse(response.body)
-    
     Rails.cache.fetch('last_updated', expires_in: 12.hours) do
+      response = HTTParty.get('https://api.github.com/repos/Shpigford/joshpigford.com')
+      json = JSON.parse(response.body)
       json['pushed_at']
     end
   end
