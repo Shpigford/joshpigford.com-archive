@@ -3,6 +3,11 @@ class ArticlesController < ApplicationController
     @articles = Article.order('publish_at desc')
     @title = "Articles"
     @description = "A collection of fine writing by Josh Pigford"
+
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false }
+    end
   end
 
   def show
