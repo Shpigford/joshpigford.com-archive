@@ -48,7 +48,7 @@
     <%= yield %>
 
     <footer>
-      Site last updated on <b>February 11, 2019 at 4:26pm CST</b>.
+      Site last updated on <b><%= last_updated.to_datetime.in_time_zone('Central Time (US & Canada)').strftime('%B %e, %Y at %l:%M%P %Z') %></b>.
     </footer>
   </div>
 </body>
