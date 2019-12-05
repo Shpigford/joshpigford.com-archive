@@ -164,7 +164,11 @@ article {
 article img {
   max-width: 100%;
 }
-
+.published {
+  &:hover {
+    background: none;
+  }
+}
 .graph {
   max-width: 100%;
   box-shadow: 8px 8px #2D3FD1;

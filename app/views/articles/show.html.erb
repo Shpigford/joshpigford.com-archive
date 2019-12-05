@@ -1,7 +1,7 @@
 <% @description = "#{markdown(@article.body).gsub(%r{</?[^>]+?>}, '')[0...300]}..." %>
 
 <article class="h-entry">
-  <h2><span class="p-name"><%= @article.title %></span> <time class="dt-published"><%= @article.publish_at.strftime('%B %e, %Y') %></time></h2>
+  <h2><span class="p-name"><%= @article.title %></span> <a href="<%= article_url(@article.slug) %>" class="published u-url"><time class="dt-published" datetime="<%= @article.publish_at.iso8601 %>"><%= @article.publish_at.strftime('%B %e, %Y') %></time></a></h2>
   <div class="e-content">
     <%= markdown(@article.body) %>
   </div>
