@@ -1,10 +1,12 @@
 <% @description = "#{markdown(@article.body).gsub(%r{</?[^>]+?>}, '')[0...300]}..." %>
 
-<h2><span class="p-name"><%= @article.title %></span> <time class="dt-published"><%= @article.publish_at.strftime('%B %e, %Y') %></time></h2>
 <article class="h-entry">
-  <div class="e-content"><%= markdown(@article.body) %></div>
+  <h2><span class="p-name"><%= @article.title %></span> <time class="dt-published"><%= @article.publish_at.strftime('%B %e, %Y') %></time></h2>
+  <div class="e-content">
+    <%= markdown(@article.body) %>
+  </div>
   <div class="convo">
-  <p>Got something to add? Continue the conversation on Twitter: <a href="https://twitter.com/intent/tweet?screen_name=Shpigford&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="true" data-size="large" data-url="<%= article_url(@article.slug) %>" data-related="Shpigford"
->Tweet to @Shpigford</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>
+    <p>Got something to add? Continue the conversation on Twitter: <a href="https://twitter.com/intent/tweet?screen_name=Shpigford&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="true" data-size="large" data-url="<%= article_url(@article.slug) %>" data-related="Shpigford"
+  >Tweet to @Shpigford</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+  </div>
 </article>
