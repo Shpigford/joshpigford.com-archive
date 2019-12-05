@@ -56,10 +56,10 @@
 <body>
 
   <div class="content">
-    <header>
+    <header class="h-card">
       <%= link_to image_tag("headshot.jpg", width: 300, height: 300, alt: 'Josh Pigford', class: 'u-photo'), root_path %>
 
-      <h1><%= link_to "Josh Pigford", root_path, class: 'h-card', rel: 'me' %> <span class="social"><a href="https://twitter.com/Shpigford" rel="me"><i class="fab fa-twitter"></i></a></span></h1>
+      <h1><%= link_to "Josh Pigford", root_path, class: 'p-name', rel: 'me' %> <span class="social"><a href="https://twitter.com/Shpigford" rel="me"><i class="fab fa-twitter"></i></a></span></h1>
       <p class="p-note">Maker. Dabbler. I can't stop starting things. Bearded.</p>
       <p>&rarr;
         <%= link_to 'Articles', articles_path %>, <%= link_to 'Health', health_path %>, <%= link_to 'Interviews', interviews_path %>, <%= link_to 'Music', music_path %>, <%= link_to 'Now', now_path %>, <%= link_to 'Past', projects_path %>, <%= link_to 'Podcasts', podcasts_path %>, <%= link_to 'Reading', reading_path %>
