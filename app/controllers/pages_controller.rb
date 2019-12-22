@@ -33,10 +33,6 @@ class PagesController < ApplicationController
     @description = "What I'm working on now"
   end
 
-  def past
-    @title = 'Past'
-  end
-
   def podcasts
     @title = 'Podcasts'
     @description = "Here are podcasts I recommend checking out. Some publish regularly, others are short, one-off series."
