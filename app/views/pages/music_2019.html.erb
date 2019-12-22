@@ -1,0 +1,10 @@
+<% 
+  @albums = [1475151504, 1439239477, 1459197530, 1491270855, 1458152823, 1441326645, 1462445652, 1466310161, 1467442146, 1470142125, 1473599936, 1476932664, 1480411285, 1448775380, 1485463688]
+%>
+
+<h2>Top Albums of 2019</h2>
+<p>These were the albums, released in 2019, that I had on rotation the most.</p>
+
+<% @albums.each do |album| %>
+  <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="315" style="width:100%;max-width:340px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/<%= album %>?app=music&at=1001lruc"></iframe>
+<% end %>

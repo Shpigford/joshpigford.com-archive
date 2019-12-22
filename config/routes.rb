@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'reading', to: 'pages#reading'
 
   get '/music/2018', to: 'pages#music_2018'
+  get '/music/2019', to: 'pages#music_2019'
 
   get '/past', to: redirect('/projects')
 
