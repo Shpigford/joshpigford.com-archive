@@ -46,4 +46,9 @@ class PagesController < ApplicationController
     @title = 'Reading'
     @description = "What I'm reading and what I've recently read."
   end
+
+  def learning
+    @title = 'Learning'
+    @description = "Resources for learning various things"
+  end
 end

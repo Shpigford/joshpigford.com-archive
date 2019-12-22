@@ -16,6 +16,8 @@ module Joshpigford
     config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
     config.middleware.use ::Rack::MethodOverride
 
+    config.middleware.use ActionDispatch::Session::CookieStore, {:cookie_only=>true, :key=>"_session_id"}
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

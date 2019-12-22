@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'now', to: 'pages#now'
   get 'podcasts', to: 'pages#podcasts'
   get 'reading', to: 'pages#reading'
+  get 'learning', to: 'pages#learning'
 
   get '/music/2018', to: 'pages#music_2018'
   get '/music/2019', to: 'pages#music_2019'
