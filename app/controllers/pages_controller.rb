@@ -23,6 +23,11 @@ class PagesController < ApplicationController
     @description = "These were the albums I had on rotation the most. In hindsight looks like I had pretty polarizing listening habits, going back and forth between pop and hardcore."
   end
 
+  def music_2019
+    @title = "Top Albums of 2019" 
+    @description = "These were the albums, released in 2019, that I had on rotation the most."
+  end
+
   def now
     @title = 'Now'
     @description = "What I'm working on now"
