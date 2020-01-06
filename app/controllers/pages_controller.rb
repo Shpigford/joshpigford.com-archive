@@ -47,4 +47,9 @@ class PagesController < ApplicationController
     @title = 'Learning'
     @description = "Resources for learning various things"
   end
+
+  def gear
+    @title = 'Gear'
+    @description = "The hardware and software I use to make all the things!"
+  end
 end
