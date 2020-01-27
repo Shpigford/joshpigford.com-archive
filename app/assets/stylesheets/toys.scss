@@ -1,0 +1,33 @@
+// Place all the styles related to the Toys controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.toys {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  img {
+    max-width: 100%;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  }
+}
+
+.toy_details {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+
+  table {
+    font-size: 1.3em;
+    th {
+      text-align: left;
+    }
+    th, td {
+      padding: 3px 15px;
+    }
+  }
+}

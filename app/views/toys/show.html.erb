@@ -1,0 +1,36 @@
+<p class="breadcrumb"><%= link_to "Toys", toys_path %> &rarr; </p>
+<h1><%= @toy.name %></h1>
+<p><%= @toy.description %></p>
+<div class="toy_details">
+  <div class="images">
+    <% @toy.images.each do |image| %>
+      <p><%= image_tag url_for(image.variant(resize_to_limit: [500, 500], background: 'white', gravity: 'center', extent: '500x500')) %></p>
+    <% end %>
+  </div>
+  <table>
+    <tr> 
+      <th>Artist</th>
+      <td><%= @toy.artist %></td>
+    </tr>
+    <tr> 
+      <th>Manufacturer</th>
+      <td><%= @toy.manufacturer %></td>
+    </tr>
+    <tr> 
+      <th>Platform</th>
+      <td><%= @toy.platform %></td>
+    </tr>
+    <tr> 
+      <th>Size</th>
+      <td><%= @toy.size %>"</td>
+    </tr>
+    <tr> 
+      <th>Color</th>
+      <td><%= @toy.color %></td>
+    </tr>
+    <tr> 
+      <th>Release Date</th>
+      <td><%= @toy.release_date.strftime('%B %e, %Y') %></td>
+    </tr>
+  </table>
+</div>

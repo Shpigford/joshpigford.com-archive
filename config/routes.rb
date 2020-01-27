@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :projects
+  resources :toys
 
   get 'health', to: 'pages#health'
   get 'interviews', to: 'pages#interviews'
