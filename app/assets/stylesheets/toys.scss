@@ -27,7 +27,14 @@
   grid-template-columns: 50% 50%;
   grid-column-gap: 40px;
   grid-row-gap: 20px;
-
+  .images {
+    img {
+      max-width: 100%;
+      padding: 10px;
+      background: white;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
   table {
     font-size: 1.3em;
     th {
