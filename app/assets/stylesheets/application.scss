@@ -30,11 +30,11 @@ html:before {
   left: 0;
   bottom: 0;
   width: 10px;
-  content: '';
+  content: "";
   display: block;
   min-height: 100%;
   height: 100%;
-  background: #2D3FD1;
+  background: #2d3fd1;
 }
 .content {
   margin: 5% 8% 10% 8%;
@@ -46,21 +46,25 @@ hr {
   border-bottom: 1px dashed #fff;
 }
 a {
-  color: #2D3FD1;
+  color: #2d3fd1;
   font-weight: bold;
   text-decoration: none;
 }
 a:hover {
   color: white;
-  background: #2D3FD1;
+  background: #2d3fd1;
 }
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0 0 15px 0;
   padding: 0;
 }
 h1 {
   font-weight: bold;
   font-size: 32px;
+  margin-top: 35px;
 }
 h2 {
   font-size: 25px;
@@ -74,7 +78,8 @@ h4 {
   font-size: 18px;
   margin-top: 35px;
 }
-p, ul {
+p,
+ul {
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 15px;
@@ -84,10 +89,11 @@ ul {
   margin: 0 0 0 20px;
   padding: 0;
 }
-ul li:hover time, ul li:hover .coming_soon {
-
+ul li:hover time,
+ul li:hover .coming_soon {
 }
-time, .coming_soon {
+time,
+.coming_soon {
   font-style: normal;
   font-size: 11px;
   background: #eee;
@@ -123,7 +129,7 @@ header h1 .social {
 }
 header h1 .social a:hover {
   background: transparent;
-  color: #2D3FD1;
+  color: #2d3fd1;
 }
 header img {
   width: 140px;
@@ -145,7 +151,8 @@ header img {
     margin-bottom: 30px;
   }
 }
-.projects {}
+.projects {
+}
 .projects h4 {
   margin-bottom: 0;
 }
@@ -171,7 +178,7 @@ article img {
 }
 .graph {
   max-width: 100%;
-  box-shadow: 8px 8px #2D3FD1;
+  box-shadow: 8px 8px #2d3fd1;
 }
 
 .convo {
@@ -195,7 +202,8 @@ footer {
   th {
     text-align: left;
   }
-  td, th {
+  td,
+  th {
     padding: 4px 8px;
   }
   thead {
@@ -214,7 +222,7 @@ footer {
     }
     tr:hover {
       cursor: pointer;
-      background-color: #2D3FD1;
+      background-color: #2d3fd1;
       color: white;
       a {
         color: white;

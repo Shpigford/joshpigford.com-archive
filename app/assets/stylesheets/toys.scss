@@ -7,11 +7,18 @@
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 20px;
+  div {
+    transform: rotate(-1deg);
+  }
   img {
     max-width: 100%;
     padding: 10px;
     background: white;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  b {
+    font-size: 1.3em;
+    line-height: 2em;
   }
 }
 
@@ -26,7 +33,8 @@
     th {
       text-align: left;
     }
-    th, td {
+    th,
+    td {
       padding: 3px 15px;
     }
   }
