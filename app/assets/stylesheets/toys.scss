@@ -9,6 +9,13 @@
   grid-row-gap: 20px;
   div {
     transform: rotate(-1deg);
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: rotate(1deg);
+      a {
+        color: #2d3fd1;
+      }
+    }
   }
   img {
     max-width: 100%;
@@ -16,9 +23,10 @@
     background: white;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   }
-  b {
+  p {
     font-size: 1.3em;
-    line-height: 2em;
+    margin-top: 5px;
+    line-height: 1.1em;
   }
 }
 

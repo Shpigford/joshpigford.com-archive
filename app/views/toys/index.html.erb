@@ -5,7 +5,7 @@
   <div>
     <%= link_to toy_path(toy) do %>
       <%= image_tag url_for(toy.images.first.variant(resize_to_limit: [500, 500], background: 'white', gravity: 'center', extent: '500x500')) %>
-      <b><%= toy.name %></b>
+      <p><%= toy.name %></p>
     <% end %>
   </div>
 <% end %>
