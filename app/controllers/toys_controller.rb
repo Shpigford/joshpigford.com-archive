@@ -1,6 +1,6 @@
 class ToysController < ApplicationController
   def index
-    @toys = Toy.all
+    @toys = Toy.all.order(:platform, :name)
     @title = 'Designer Toys'
     @description = "My designer toy collection."
   end
