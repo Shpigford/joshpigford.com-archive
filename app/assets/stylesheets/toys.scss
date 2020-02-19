@@ -7,6 +7,19 @@
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 20px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   div {
     transform: rotate(-1deg);
     transition: 0.2s ease-in-out;
@@ -51,6 +64,15 @@
     th,
     td {
       padding: 3px 15px;
+    }
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 100%;
+    table {
+      order: 1;
+    }
+    .images {
+      order: 2;
     }
   }
 }
