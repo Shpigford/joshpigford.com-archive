@@ -20,6 +20,12 @@
       <th>Platform</th>
       <td><%= @toy.platform %></td>
     </tr>
+    <% if @toy.series.present? %>
+    <tr> 
+      <th>Series</th>
+      <td><%= @toy.series %></td>
+    </tr>
+    <% end %>
     <tr> 
       <th>Size</th>
       <td><%= @toy.size %>"</td>
