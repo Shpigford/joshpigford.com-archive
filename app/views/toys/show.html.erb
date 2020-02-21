@@ -37,5 +37,11 @@
       <th>Released</th>
       <td><%= @toy.release_date.strftime('%Y') %></td>
     </tr>
+    <% if @toy.original_price.present? %>
+    <tr> 
+      <th>Original Price</th>
+      <td><%= @toy.original_price %></td>
+    </tr>
+    <% end %>
   </table>
 </div>
