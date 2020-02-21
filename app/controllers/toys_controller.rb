@@ -7,6 +7,6 @@ class ToysController < ApplicationController
 
   def show
     @toy = Toy.find(params[:id])
-    @title = "#{@toy.name} - Designer Toys"
+    @title = "#{@toy.name} - #{@toy.platform} - Designer Toys"
   end
 end

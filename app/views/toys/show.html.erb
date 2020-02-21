@@ -1,6 +1,5 @@
 <p class="breadcrumb"><%= link_to "Toys", toys_path %> &rarr; </p>
 <h1><%= @toy.name %></h1>
-<p><%= @toy.description %></p>
 <div class="toy_details">
   <div class="images">
     <% @toy.images.each do |image| %>
@@ -35,8 +34,8 @@
       <td><%= @toy.color %></td>
     </tr>
     <tr> 
-      <th>Release Date</th>
-      <td><%= @toy.release_date.strftime('%B %e, %Y') %></td>
+      <th>Released</th>
+      <td><%= @toy.release_date.strftime('%Y') %></td>
     </tr>
   </table>
 </div>
