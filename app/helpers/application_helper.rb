@@ -20,6 +20,18 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def title(page_title)
+    content_for(:title) { page_title }
+  end
+
+  def description(page_description)
+    content_for(:description) { page_description }
+  end
+
+  def meta_image(meta_image)
+    content_for(:meta_image) { meta_image }
+  end
+
   def last_updated
     last_updated = Rails.cache.fetch('last_updated', expires_in: 12.hours) do
       response = HTTParty.get('https://api.github.com/repos/Shpigford/joshpigford.com')
