@@ -18,6 +18,7 @@ gem 'bootsnap'
 gem 'rails_admin'
 gem 'coffee-rails'
 gem 'image_processing'
+gem 'rouge'
 gem 'aws-sdk-s3', require: false
 
 group :development, :test do
