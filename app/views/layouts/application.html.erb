@@ -11,13 +11,13 @@
   <meta property="og:title" content="<%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %>">
   <meta property="og:type" content="article">
   <meta property="og:description" content="<%= @description %>">
-  <meta name="og:image" content="<%= content_for?(:meta_image) ? yield(:meta_image) : "https://joshpigford.com/headshot.jpg" %>">
+  <meta name="og:image" content="<%= content_for?(:meta_image) ? yield(:meta_image) : "https://joshpigford.com/headshot-nft.png" %>">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@shpigford">
   <meta name="twitter:creator" content="@shpigford">
   <meta name="twitter:title" content="<%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %>">
   <meta name="twitter:description" content="<%= @description %>">
-  <meta name="twitter:image" content="<%= content_for?(:meta_image) ? yield(:meta_image) : "https://joshpigford.com/headshot.jpg" %>">
+  <meta name="twitter:image" content="<%= content_for?(:meta_image) ? yield(:meta_image) : "https://joshpigford.com/headshot-nft.png" %>">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <%= auto_discovery_link_tag :rss, articles_url(:format => :rss) %>
@@ -48,7 +48,7 @@
 
   <div class="content">
     <header class="h-card">
-      <%= link_to image_tag("headshot.jpg", width: 300, height: 300, alt: 'Josh Pigford', class: 'u-photo'), root_path %>
+      <%= link_to image_tag("headshot-nft.png", width: 300, height: 300, alt: 'Josh Pigford', class: 'u-photo'), root_path %>
 
       <h1><%= link_to "Josh Pigford", root_path, class: 'p-name', rel: 'me' %> <span class="social"><a href="https://twitter.com/Shpigford" rel="me"><i class="fab fa-twitter"></i></a></span></h1>
       <p class="p-note">Maker. Dabbler. I can't stop starting things. Bearded.</p>
