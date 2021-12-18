@@ -9,10 +9,12 @@
     "autoprefixer": "^10.4.0",
     "esbuild": "^0.14.5",
     "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-nesting": "^10.0.3",
     "tailwindcss": "^3.0.6"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+    "build:css": "postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css"
   }
 }

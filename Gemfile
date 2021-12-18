@@ -47,7 +47,6 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 #gem "sassc-rails"
-gem 'sass-rails'
 
 gem "httparty"
 gem "rails_admin", git: 'https://github.com/railsadminteam/rails_admin'
