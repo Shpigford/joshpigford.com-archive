@@ -286,7 +286,6 @@ DEPENDENCIES
   redis (~> 4.0)
   sassc-rails
   selenium-webdriver
-  sprockets-rails
   stimulus-rails
   turbo-rails (~> 0.8)
   tzinfo-data
