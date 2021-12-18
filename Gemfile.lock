@@ -242,8 +242,9 @@ GEM
       railties (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
-    turbo-rails (7.1.1)
-      rails (>= 6.0.0)
+    turbo-rails (0.9.1)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     web-console (4.2.0)
@@ -287,7 +288,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
-  turbo-rails
+  turbo-rails (~> 0.8)
   tzinfo-data
   web-console
   webdrivers
