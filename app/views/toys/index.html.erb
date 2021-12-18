@@ -1,0 +1,20 @@
+<div class="prose max-w-none">
+  <h1>Designer Toys</h1>
+  <p>I started collecting designer toys back in 2004. Eventually, my little hobby turned into an <a href="https://joshpigford.com/projects/fugitive-toys">actual toy store</a> that my wife and I started in 2006, and then sold in 2009. My collection isn't quite what it was back then, but in the past few years I've started actively collecting again. This is a place for me to show off that collection!</p>
+
+  <div class="not-prose">
+  <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+    <% @toys.each do |toy| %>
+    <li class="relative transition ease-in-out duration-300 -rotate-1 hover:rotate-0">
+      <%= link_to toy_path(toy) do %>
+      <div class="group block w-full aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden shadow-lg">
+        <%= image_tag url_for(toy.images.first.variant(resize_and_pad: [200, 200, background: [255]])), class: 'object-cover pointer-events-none group-hover:opacity-75' %>
+      </div>
+      <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"><%= toy.name %></p>
+      <p class="block text-sm font-medium text-gray-500 pointer-events-none"><%= toy.platform %></p>
+      <% end %>
+    </li>
+  <% end %>
+    </ul>
+  </div>
+</div>

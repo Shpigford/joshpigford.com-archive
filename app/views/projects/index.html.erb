@@ -1,0 +1,26 @@
+<div class="prose max-w-none">
+  <h1>Projects</h1>
+  <p>I've worked on (and continue to work on) an absurd number of things. Current tally? <b><%=@projects.count %> projects</b>.</p>
+
+  <table class="project_list">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Started</th>
+        <th>Description</th>
+        <th>What Happened</th>
+      </tr>
+    </thead>
+    <tbody class="text-sm">
+      <% @projects.each do |project| %>
+      <tr class="group odd:bg-white even:bg-gray-100 hover:bg-blue-700">
+        <td class="px-2 py-3"><%= link_to project.name, project_path(project.slug), class: 'block group-hover:text-white' %></td>
+        <td><%= link_to project.year, project_path(project.slug), class: 'block group-hover:text-white' %></td>
+        <td><%= link_to project.description, project_path(project.slug), class: 'block group-hover:text-white' %></td>
+        <td><%= link_to project.outcome, project_path(project.slug), class: 'block group-hover:text-white' %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

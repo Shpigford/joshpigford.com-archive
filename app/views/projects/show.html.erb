@@ -1,0 +1,17 @@
+<div class="prose">
+  <p class="breadcrumb"><%= link_to "&larr; Back to projects".html_safe, projects_path %></p>
+  <h1><%= @project.name %> <time><%= @project.year %></time></h1>
+  <p><%= @project.description %></p>
+
+  <h3>What happened?</h3>
+  <p><%= @project.outcome %></p>
+
+  <% if @project.notes.present? %>
+  <h3>Interesting bits</h3>
+  <p><%= @project.notes %></p>
+  <% end %>
+
+  <% if @project.link.present? %>
+  <h3><%= link_to "Go Wayback &rarr;".html_safe, @project.link %></h3>
+  <% end %>
+</div>
