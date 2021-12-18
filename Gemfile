@@ -46,7 +46,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+#gem "sassc-rails"
 
 gem "httparty"
 gem "rails_admin", git: 'https://github.com/railsadminteam/rails_admin'
@@ -79,4 +79,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "sassc-rails"
