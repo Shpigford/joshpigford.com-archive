@@ -49,7 +49,7 @@ gem "bootsnap", require: false
 #gem "sassc-rails"
 
 gem "httparty"
-gem "rails_admin", git: 'https://github.com/railsadminteam/rails_admin'
+#gem "rails_admin", git: 'https://github.com/railsadminteam/rails_admin'
 gem "redcarpet"
 gem "aws-sdk-s3", require: false
 gem "dotenv-rails"
