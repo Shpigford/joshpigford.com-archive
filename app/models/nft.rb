@@ -1,0 +1,2 @@
+class Nft < ApplicationRecord
+end

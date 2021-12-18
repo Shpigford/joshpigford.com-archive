@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_18_024424) do
+ActiveRecord::Schema.define(version: 2021_12_18_220217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,24 @@ ActiveRecord::Schema.define(version: 2021_12_18_024424) do
     t.string "slug"
     t.text "body"
     t.datetime "publish_at", precision: 6
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "nfts", force: :cascade do |t|
+    t.string "asset_name"
+    t.string "collection_name"
+    t.string "identifier"
+    t.string "token_id"
+    t.string "asset_contract_address"
+    t.string "asset_image_url"
+    t.string "collection_image_url"
+    t.text "description"
+    t.string "external_link"
+    t.string "network"
+    t.string "slug"
+    t.datetime "acquired_at", precision: 6
+    t.boolean "hidden", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

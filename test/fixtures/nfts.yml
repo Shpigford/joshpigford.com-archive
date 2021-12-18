@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asset_name: MyString
+  collection_name: MyString
+  identifier: MyString
+  asset_image_url: MyString
+  collection_image_url: MyString
+  description: MyText
+  external_link: MyString
+  network: MyString
+  slug: MyString
+  acquired_at: 2021-12-18 16:02:18
+
+two:
+  asset_name: MyString
+  collection_name: MyString
+  identifier: MyString
+  asset_image_url: MyString
+  collection_image_url: MyString
+  description: MyText
+  external_link: MyString
+  network: MyString
+  slug: MyString
+  acquired_at: 2021-12-18 16:02:18
