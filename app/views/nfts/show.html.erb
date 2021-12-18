@@ -1,2 +1,25 @@
-<h1>Nfts#show</h1>
-<p>Find me in app/views/nfts/show.html.erb</p>
+<p class="breadcrumb"><%= link_to "NFTs", nfts_path %> &rarr; </p>
+<div class="prose max-w-none">
+<h1><%= @nft.asset_name %></h1>
+<div class="flex items-start">
+  <div class="flex-1">
+    <p><%= image_tag @nft.asset_image_url %></p>
+  </div>
+  <table class="flex-1">
+    <tr> 
+      <th>Collection</th>
+      <td><%= @nft.collection_name %></td>
+    </tr>
+    <tr> 
+      <th>External Link</th>
+      <td><%= link_to "View on OpenSea", @nft.external_link %></td>
+    </tr>
+    <% if @nft.description.present? %>
+    <tr> 
+      <th>Description</th>
+      <td><%= @nft.description %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+</div>

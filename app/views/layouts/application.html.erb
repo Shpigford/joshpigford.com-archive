@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Josh Pigford</title>
+    <title><%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="<%= @description %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

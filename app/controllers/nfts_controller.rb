@@ -6,5 +6,7 @@ class NftsController < ApplicationController
   end
 
   def show
+    @nft = Nft.find_by(slug: params[:id])
+    @title = "#{@nft.asset_name} - #{@nft.collection_name} - NFTs"
   end
 end
