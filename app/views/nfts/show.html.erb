@@ -1,23 +1,31 @@
 <p class="breadcrumb"><%= link_to "NFTs", nfts_path %> &rarr; </p>
 <div class="prose max-w-none">
 <h1><%= @nft.asset_name %></h1>
-<div class="flex items-start">
-  <div class="flex-1">
-    <p><%= image_tag @nft.asset_image_url %></p>
+<div class="grid grid-cols-2 items-start">
+  <div class="not-prose">
+    <p class="mt-0 mr-8"><%= image_tag nft_image(@nft.asset_image_url) %></p>
   </div>
-  <table class="flex-1">
+  <table>
+    <tr> 
+      <th>Network</th>
+      <td><%= @nft.network %></td>
+    </tr>
+    <% if @nft.collection_name.present? %>
     <tr> 
       <th>Collection</th>
       <td><%= @nft.collection_name %></td>
     </tr>
+    <% end %>
+    <% if @nft.network == 'ETH' %>
     <tr> 
       <th>External Link</th>
       <td><%= link_to "View on OpenSea", @nft.external_link %></td>
     </tr>
+    <% end %>
     <% if @nft.description.present? %>
     <tr> 
       <th>Description</th>
-      <td><%= @nft.description %></td>
+      <td><%= simple_format(@nft.description) %></td>
     </tr>
     <% end %>
   </table>
