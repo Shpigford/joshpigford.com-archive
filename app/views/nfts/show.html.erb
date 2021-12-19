@@ -3,7 +3,7 @@
 <h1><%= @nft.asset_name %></h1>
 <div class="grid grid-cols-2 items-start">
   <div class="not-prose">
-    <p class="mt-0 mr-8"><%= image_tag nft_image(@nft.asset_image_url) %></p>
+    <p class="mt-0 mr-8"><%= image_tag nft_image(@nft.asset_image_url), class: 'shadow-lg rounded-lg' %></p>
   </div>
   <table>
     <tr> 
