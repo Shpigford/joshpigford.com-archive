@@ -1,6 +1,6 @@
 class NftsController < ApplicationController
   def index
-    @nfts = Nft.all.order(:collection_name, :asset_name).where.not(asset_name: "[WAITING TO BE SIGNED]").where.not(asset_image_url: nil)
+    @nfts = Nft.all.order(:collection_name, :asset_name).where(hidden: false).where.not(asset_image_url: nil)
     @title = 'NFTs'
     @description = "My NFT collection."
   end

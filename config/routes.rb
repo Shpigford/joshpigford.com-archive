@@ -1,6 +1,4 @@
-Rails.application.routes.draw do
-  #mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
+Rails.application.routes.draw do  
   resources :articles
   resources :projects
   resources :toys
