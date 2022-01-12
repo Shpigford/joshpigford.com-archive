@@ -1,6 +1,14 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
 
+  config.main_app_name = ["Josh Pigford", "Back Office"]
+
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic('Back Office') do |username, password|
+      username == ENV['admin_user'] && password == ENV['admin_pass']
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
