@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/railsadminteam/rails_admin
+  revision: 4337c1d691554dc1fa87414b2402b7d0b0c5f183
+  specs:
+    rails_admin (3.0.0.beta2)
+      activemodel-serializers-xml (>= 1.0)
+      kaminari (>= 0.14, < 2.0)
+      nested_form (~> 0.3)
+      rack-pjax (>= 0.7)
+      rails (>= 6.0, < 8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -45,6 +56,10 @@ GEM
       globalid (>= 0.3.6)
     activemodel (7.0.0)
       activesupport (= 7.0.0)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (7.0.0)
       activemodel (= 7.0.0)
       activesupport (= 7.0.0)
@@ -123,6 +138,18 @@ GEM
     jmespath (1.4.0)
     jsbundling-rails (1.0.0)
       railties (>= 6.0.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -139,6 +166,7 @@ GEM
     minitest (5.15.0)
     msgpack (1.4.2)
     multi_xml (0.6.0)
+    nested_form (0.3.2)
     nio4r (2.5.8)
     nokogiri (1.12.5-arm64-darwin)
       racc (~> 1.4)
@@ -150,6 +178,9 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
+    rack-pjax (1.1.0)
+      nokogiri (~> 1.5)
+      rack (>= 1.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.0)
@@ -241,6 +272,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.0)
+  rails_admin!
   redcarpet
   redis (~> 4.0)
   selenium-webdriver
