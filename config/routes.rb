@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'reading', to: 'pages#reading'
   get 'learning', to: 'pages#learning'
   get 'gear', to: 'pages#gear'
+  get 'investments', to: 'pages#investments'
 
   root "pages#index"
 end
