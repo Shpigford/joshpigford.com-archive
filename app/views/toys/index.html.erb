@@ -7,10 +7,10 @@
     <% @toys.each do |toy| %>
     <li class="relative">
       <%= link_to toy_path(toy) do %>
-      <div class="group block w-full aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden shadow-lg">
-        <%= image_tag url_for(toy.images.first.variant(resize_and_pad: [200, 200, background: [255]])), class: 'object-cover pointer-events-none group-hover:opacity-75' %>
+      <div class="block w-full overflow-hidden bg-gray-100 rounded-lg shadow-lg group aspect-w-1 aspect-h-1 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500">
+        <%= image_tag url_for(toy.images.first.variant(resize_and_pad: [500, 500, background: [255]])), class: 'object-cover pointer-events-none group-hover:opacity-75' %>
       </div>
-      <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"><%= toy.name %></p>
+      <p class="block mt-2 text-sm font-medium text-gray-900 truncate pointer-events-none"><%= toy.name %></p>
       <p class="block text-sm font-medium text-gray-500 pointer-events-none"><%= toy.platform %></p>
       <% end %>
     </li>
