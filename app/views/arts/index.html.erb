@@ -1,0 +1,23 @@
+<div class="prose max-w-none">
+  <h1>Art</h1>
+
+  <p>
+    series: 
+    <% @categories.order(:name).each do |cat| %>
+      <%= link_to cat.name, series_art_path(cat.slug) %><%= "," if cat != @categories.last %>
+    <% end %>
+  </p>
+
+  <div class="not-prose">
+    <div class="gap-3 mx-auto space-y-3 columns-5">
+      <% @art.each do |art| %>
+      <div class="break-inside-avoid">
+        <%= link_to art_path(art) do %>
+        <%= image_tag url_for(art.images.first.variant(resize_to_limit: [500, 800])), class: 'rounded-lg shadow-lg' %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<p class="breadcrumb"><%= link_to "Art", arts_path %> &rarr; </p>
+<div class="prose max-w-none">
+  <h1><%=@series.name %></h1>
+
+  <div class="not-prose">
+    <div class="gap-3 mx-auto space-y-3 columns-5">
+      <% @art.each do |art| %>
+      <div class="break-inside-avoid">
+        <%= link_to art_path(art) do %>
+        <%= image_tag url_for(art.images.first.variant(resize_to_limit: [500, 800])), class: 'rounded-lg shadow-lg' %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

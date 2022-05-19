@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :toys
   resources :nfts
 
+  match "/art/series/:series" => "arts#series", via: :get, as: 'series_art'
+  resources :arts, :path => "art"
+
   get 'health', to: 'pages#health'
   get 'interviews', to: 'pages#interviews'
   get 'music', to: 'pages#music'

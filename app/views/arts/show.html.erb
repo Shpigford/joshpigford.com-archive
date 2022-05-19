@@ -1,0 +1,38 @@
+<p class="breadcrumb"><%= link_to "Art", arts_path %> &rarr; <%= link_to @art.art_category.name, series_art_path(@art.art_category.slug) %> &rarr; </p>
+<div class="prose max-w-none">
+<h1><%= @art.name %></h1>
+<div class="grid items-start grid-cols-2">
+  <div class="not-prose">
+    <p class="mt-0 mr-8"><%= image_tag url_for(@art.images.first.variant(resize_to_limit: [1200, 1200])), class: 'rounded-lg shadow-lg' %></p>
+  </div>
+  <table>
+    <tr> 
+      <th>Series</th>
+      <td><%= @art.art_category.name %></td>
+    </tr>
+    <% if @art.description.present? %>
+    <tr> 
+      <th>Description</th>
+      <td><%= @art.description %></td>
+    </tr>
+    <% end %>
+    <% if @art.tools.present? %>
+    <tr> 
+      <th>Tools</th>
+      <td><%= @art.tools %></td>
+    </tr>
+    <% end %>
+    <% if @art.nft == true %>
+    <tr> 
+      <th>NFT</th>
+      <td><%= link_to "Purchase", @art.external_link %></td>
+    </tr>
+    <% else %>
+    <tr> 
+      <th>Download</th>
+      <td><%= link_to "Full Size", rails_representation_url(@art.images.first.variant(resize_to_limit: [5000, 5000])) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+</div>

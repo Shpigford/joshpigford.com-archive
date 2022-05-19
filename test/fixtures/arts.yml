@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  series: MyString
+  description: MyText
+  tools: MyText
+  nft: false
+  external_link: MyString
+
+two:
+  name: MyString
+  series: MyString
+  description: MyText
+  tools: MyText
+  nft: false
+  external_link: MyString
