@@ -10,6 +10,16 @@
       <th>Series</th>
       <td><%= @art.art_category.name %></td>
     </tr>
+    <tr> 
+      <th>Created</th>
+      <td>
+      <% if @art.produced_on.present? %>
+        <%= @art.produced_on.strftime('%b %-d, %Y') %>
+      <% else %>
+        <%= @art.created_at.strftime('%b %-d, %Y') %>
+      <% end %>
+      </td>
+    </tr>
     <% if @art.description.present? %>
     <tr> 
       <th>Description</th>

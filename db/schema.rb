@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_19_213641) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_19_214730) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,6 +67,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_213641) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "art_category_id"
+    t.date "produced_on"
     t.index ["art_category_id"], name: "index_arts_on_art_category_id"
   end
 
