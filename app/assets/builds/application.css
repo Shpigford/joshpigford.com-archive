@@ -965,6 +965,10 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1027,10 +1031,6 @@ a:hover {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .items-start {
   align-items: flex-start;
 }
@@ -1046,10 +1046,6 @@ a:hover {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-y-3 {
-  row-gap: 0.75rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -1121,6 +1117,10 @@ a:hover {
 
 .font-medium {
   font-weight: 500;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .text-black {
