@@ -1,3 +1,9 @@
+<%- 
+  title "#{@art.name} - #{@art.art_category.name} - Art"
+  description "#{@art.name} from the #{@art.art_category.name} series of art by Josh Pigford"
+  meta_image rails_representation_url(@art.images.first.variant(resize_to_fill: [1200, 800]))
+-%>
+
 <p class="breadcrumb"><%= link_to "Art", arts_path %> &rarr; <%= link_to @art.art_category.name, series_art_path(@art.art_category.slug) %> &rarr; </p>
 <div class="prose max-w-none">
 <h1><%= @art.name %></h1>

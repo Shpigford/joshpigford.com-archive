@@ -1,7 +1,13 @@
+<%- 
+  title "#{@nft.asset_name} - #{@nft.collection_name} - NFTs"
+  description "NFTs owned by Josh Pigford"
+  meta_image nft_image(@nft.asset_image_url)
+-%>
+
 <p class="breadcrumb"><%= link_to "NFTs", nfts_path %> &rarr; </p>
 <div class="prose max-w-none">
 <h1><%= @nft.asset_name %></h1>
-<div class="grid grid-cols-2 items-start">
+<div class="grid items-start grid-cols-2">
   <div class="not-prose">
     <p class="mt-0 mr-8"><%= image_tag nft_image(@nft.asset_image_url), class: 'shadow-lg rounded-lg' %></p>
   </div>

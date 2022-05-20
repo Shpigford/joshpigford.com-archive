@@ -1,3 +1,8 @@
+<%- 
+  title "#{@project.name} - Projects"
+  description "#{@project.name}: #{@project.description}"
+-%>
+
 <div class="prose">
   <p class="breadcrumb"><%= link_to "&larr; Back to projects".html_safe, projects_path %></p>
   <h1><%= @project.name %> <time><%= @project.year %></time></h1>

@@ -1,4 +1,8 @@
-<% meta_image(rails_representation_url(@toy.images.first.variant(resize_to_limit: [1200, 800], background: 'white', gravity: 'center', extent: '1200x800'))) %>
+<%- 
+  title "#{@toy.name} - #{@toy.platform} - Designer Toys"
+  description "#{@toy.name} by #{@toy.artist}, from Josh Pigford's designer toy collection."
+  meta_image rails_representation_url(@toy.images.first.variant(resize_to_fill: [1200, 800]))
+-%>
 
 <p class="breadcrumb"><%= link_to "Toys", toys_path %> &rarr; </p>
 <div class="prose max-w-none">

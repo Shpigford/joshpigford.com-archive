@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title ? "#{@title} - Josh Pigford" : "Josh Pigford" %></title>
+    <title><%= content_for?(:title) ? ("#{yield(:title)} - Josh Pigford").html_safe : "Josh Pigford" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="<%= @description %>">
+
+    <meta name="title" content="<%= content_for?(:title) ? ("#{yield(:title)} - Josh Pigford").html_safe : "Josh Pigford" %>">
+    <meta name="description" content="<%= content_for?(:description) ? (yield(:description)) : "Josh Pigford: Maker. Dabbler. Founder and CEO of Maybe." %>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= content_for?(:title) ? ("#{yield(:title)} - Josh Pigford").html_safe : "Josh Pigford" %>">
+    <meta property="og:description" content="<%= content_for?(:description) ? (yield(:description)) : "Josh Pigford: Maker. Dabbler. Founder and CEO of Maybe." %>">
+    <meta property="og:image" content="<%= image_url(content_for?(:meta_image) ? yield(:meta_image) : "meta.jpg") %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="<%= content_for?(:title) ? ("#{yield(:title)} - Josh Pigford").html_safe : "Josh Pigford" %>">
+    <meta property="twitter:description" content="<%= content_for?(:description) ? (yield(:description)) : "Josh Pigford: Maker. Dabbler. Founder and CEO of Maybe." %>">
+    <meta property="twitter:image" content="<%= image_url(content_for?(:meta_image) ? yield(:meta_image) : "meta.jpg") %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -19,7 +34,7 @@
   <body>
     <header class="flex mb-10">
       <div class="flex-none mr-8">
-        <%= link_to image_tag("joshpigford-memoji.png", alt: 'Josh Pigford', class: 'w-36 h-36 rounded-full'), root_path %>
+        <%= link_to image_tag("headshot-collage.jpg", alt: 'Josh Pigford', class: 'w-36 h-36 rounded-full'), root_path %>
       </div>
       <div class="flex-auto mt-3">
         <h1 class="mb-3 text-3xl font-black"><%= link_to "Josh Pigford", root_path, class: 'text-black', rel: 'me' %> <span><a href="https://twitter.com/Shpigford" rel="me" class="text-black hover:bg-transparent hover:text-blue-700"><i class="text-2xl fab fa-twitter"></i></a></span></h1>
