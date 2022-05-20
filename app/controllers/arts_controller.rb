@@ -1,8 +1,8 @@
 class ArtsController < ApplicationController
   def index
-    @art = Art.all.order(:name)
+    @art = Art.all.order(Arel.sql('RANDOM()'))
     @title = 'Art'
-    @description = "My art."
+    #@description = "My art."
     @categories = ArtCategory.all.order(:name)
   end
 
@@ -13,12 +13,10 @@ class ArtsController < ApplicationController
 
   def series
     @series = ArtCategory.where(slug: params[:series]).first
+    @art = @series.arts.order(Arel.sql('RANDOM()'))
 
-    @art = @series.arts.order(:name)
-
-    @title = 'Art'
-    @description = "My art."
-
+    @title = "#{@series.name} - Art"
+    #@description = "My art."
   end
   
 end
